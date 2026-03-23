@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# Veri Setleri (Kesinlikle repoya girmemeli, çok büyükler)
+data/raw/
+data/processed/*.npy
+data/processed/*.csv
+
+# Modeller ve Scaler (Binary dosyalar repoyu ağırlaştırır)
+# Eğer temel modelleri (json olanları) paylaşmak istersen sonundaki ünlemi kullanabilirsin
+models/*.h5
+models/*.pkl
+models/*.json
+# !models/best_xgb_model.json  <-- Eğer birini illa atmak istersen başına ! koy
+
+# Loglar
+logs/
+*.log
+
+# IDE ve OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
