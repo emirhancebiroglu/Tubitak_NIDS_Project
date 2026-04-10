@@ -1,0 +1,3 @@
+venv\Scripts\activate
+cp /mnt/c/Users/emirh/Downloads/pack/run_lstm_replay.sh ~/bitirme/scripts/run_lstm_replay.sh
+confision matrix icin flowid eslestirme durumuna bakilacak

@@ -1,13 +1,13 @@
 import pandas as pd
 from sklearn.metrics import confusion_matrix, accuracy_score, precision_score, recall_score
 
-with open("alert.txt") as f:
+with open("./logs/alert.txt") as f:
     alert_flows = set(line.strip() for line in f)
 
 chunksize = 10000
 cm_total = [[0, 0], [0, 0]]
 
-for chunk in pd.read_csv("merged_small.csv", chunksize=chunksize):
+for chunk in pd.read_csv("./data/processed/merged_small.csv", chunksize=chunksize):
     chunk['Predicted'] = chunk['Flow ID'].isin(alert_flows).astype(int)
     chunk['Label_binary'] = chunk['Label'].apply(lambda x: 0 if x == "BENIGN" else 1)
 
