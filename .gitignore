@@ -25,4 +25,5 @@ logs/
 .vscode/
 .idea/
 .DS_Store
-Thumbs.db
+results/ 
+plugins/ml_inspector/build/
